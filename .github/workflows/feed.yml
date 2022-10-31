@@ -22,4 +22,5 @@ jobs:
       - name: Update Notion Feed
         run: |
           cd ../notion-rss-reader/
+          echo "$(ls)"
           echo "$(deno task start)"
