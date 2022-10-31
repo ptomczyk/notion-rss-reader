@@ -7,7 +7,7 @@ export const getFeedUrlList = async () => {
   const notion = new Client({ auth: Deno.env.get("NOTION_KEY") });
   const databaseId = Deno.env.get("NOTION_FEEDER_DATABASE_ID") ?? "";
 
-  console.log(`${databaseId} <--- database id`);
+  console.log(`${databaseId.slice(0, 5)} <--- database id`);
 
   const response = await notion.databases.query({
     database_id: databaseId,
