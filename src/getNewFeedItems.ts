@@ -1,5 +1,5 @@
 import Parser from 'rss-parser'
-import { timeDifference } from './helpers'
+import { timeDifference } from '@/helpers.ts'
 
 const parser = new Parser()
 
