@@ -1,5 +1,4 @@
 import { Client } from '@notionhq/client'
-import { CreatePageParameters } from '@notionhq/client/build/src/api-endpoints'
 import ogp from 'ogp-parser'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -53,7 +52,7 @@ export const addFeedItems = async (
         })
       : ''
 
-    const children: CreatePageParameters['children'] = enclosure
+    const children: TODO = enclosure
       ? [
           {
             type: 'image',
