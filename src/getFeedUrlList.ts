@@ -4,6 +4,7 @@ import { Client } from '@notionhq/client'
 type TODO = any
 
 export const getFeedUrlList = async () => {
+  console.log((Deno.env.get("NOTION_KEY") ?? "undefined").slice(0, 4))
   const notion = new Client({ auth: Deno.env.get("NOTION_KEY") })
   const databaseId = Deno.env.get("NOTION_FEEDER_DATABASE_ID") || ''
 
