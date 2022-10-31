@@ -1,6 +1,6 @@
-import { getNewFeedItems } from '@/getNewFeedItems'
-import { getFeedUrlList } from '@/getFeedUrlList'
-import { addFeedItems } from '@/addFeedItems'
+import { getNewFeedItems } from '@/getNewFeedItems.ts'
+import { getFeedUrlList } from '@/getFeedUrlList.ts'
+import { addFeedItems } from '@/addFeedItems.ts'
 
 import dotenv from 'dotenv'
 dotenv.config()
