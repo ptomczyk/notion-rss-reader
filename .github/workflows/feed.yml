@@ -13,12 +13,10 @@ jobs:
       NOTION_READER_DATABASE_ID: ${{ secrets.NOTION_READER_DATABASE_ID }}
       NOTION_FEEDER_DATABASE_ID: ${{ secrets.NOTION_FEEDER_DATABASE_ID }}
     steps:
-      - name: Setup Node
-        uses: actions/setup-node@v2
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
         with:
-          node-version: 14
-
+          deno-version: "1.8.2"
       - name: Update Notion Feed
-        run: |
-          curl -o bundle.cjs https://raw.githubusercontent.com/watsuyo/notion-rss-reader/bundle/dist/bundle.cjs
-          node bundle.cjs
+        run:
+          ls
