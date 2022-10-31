@@ -18,5 +18,6 @@ jobs:
         with:
           deno-version: "1.8.2"
       - name: Update Notion Feed
+        uses: actions/checkout@v3
         run:
           echo "$(ls -la ../notion-rss-reader)"
