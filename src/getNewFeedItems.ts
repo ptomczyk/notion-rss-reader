@@ -5,6 +5,7 @@ const parser = new Parser()
 
 export const getNewFeedItems = async (feedUrl: string) => {
   try {
+    console.log('feedUrl', feedUrl)
     const { items: newFeedItems } = await parser.parseURL(feedUrl)
 
     return newFeedItems.filter((feedItem) => {
