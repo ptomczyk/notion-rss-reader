@@ -86,7 +86,7 @@ export const addFeedItems = async (
         children,
       })
     } catch (error) {
-      console.error(error)
+      console.error(`addFeedItems`, error)
     }
   })
 }
