@@ -1,4 +1,4 @@
-import { Client } from '@notionhq/client'
+import { Client } from 'notion'
 import ogp from 'ogp-parser'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -13,6 +13,7 @@ export const addFeedItems = async (
   const databaseId = Deno.env.get("NOTION_READER_DATABASE_ID") || ''
 
   newFeedItems.forEach(async (item) => {
+    console.log(item)
     const { title, link, enclosure, pubDate } = item
     const domain = link?.match(/^https?:\/{2,}(.*?)(?:\/|\?|#|$)/)
 

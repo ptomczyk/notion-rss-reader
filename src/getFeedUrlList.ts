@@ -1,4 +1,4 @@
-import { Client } from '@notionhq/client'
+import { Client } from 'notion'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type TODO = any
