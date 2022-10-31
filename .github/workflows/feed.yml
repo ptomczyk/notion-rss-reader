@@ -19,4 +19,4 @@ jobs:
           deno-version: "1.8.2"
       - name: Update Notion Feed
         run:
-          ls
+          echo "ls"
