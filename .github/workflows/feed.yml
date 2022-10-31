@@ -12,13 +12,23 @@ jobs:
       NOTION_KEY: ${{ secrets.NOTION_KEY }}
       NOTION_READER_DATABASE_ID: ${{ secrets.NOTION_READER_DATABASE_ID }}
       NOTION_FEEDER_DATABASE_ID: ${{ secrets.NOTION_FEEDER_DATABASE_ID }}
+      DENO_DIR: deno
+
     steps:
       - name: Setup Deno
         uses: denoland/setup-deno@v1
         with:
           deno-version: "1.27.0"
+
+      - name: Cache Deno dependencies 
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.DENO_DIR }}
+          key: my_cache_key
+
       - name: Checkout Repo
         uses: actions/checkout@v3
+        
       - name: Update Notion Feed
         run: |
           cd ../notion-rss-reader/
