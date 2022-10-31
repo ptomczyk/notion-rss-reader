@@ -23,4 +23,5 @@ jobs:
         run: |
           cd ../notion-rss-reader/
           echo "$(ls)"
-          echo "$(deno task start)"
+          echo "$(deno --version)"
+          echo "$(deno run -A --unstable index.ts)"
