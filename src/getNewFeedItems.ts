@@ -18,7 +18,7 @@ export const getNewFeedItems = async (feedUrl: string) => {
       return diffInHours < 24
     })
   } catch (error) {
-    console.error('getNewFeedItems', error)
+    console.error('getNewFeedItems', feedUrl, error)
     return []
   }
 }
