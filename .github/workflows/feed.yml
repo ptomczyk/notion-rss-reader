@@ -17,7 +17,8 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: "1.8.2"
-      - name: Update Notion Feed
+      - name: Checkout Repo
         uses: actions/checkout@v3
+      - name: Update Notion Feed
         run:
           echo "$(ls -la ../notion-rss-reader)"
