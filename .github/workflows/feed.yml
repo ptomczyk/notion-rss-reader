@@ -16,12 +16,10 @@ jobs:
       - name: Setup Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: "1.8.2"
+          deno-version: "1.27.0"
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Update Notion Feed
         run: |
           cd ../notion-rss-reader/
-          echo "$(ls)"
-          echo "$(deno --version)"
-          echo "$(deno run -A --unstable index.ts)"
+          echo "$(deno run -A --unstable --import-map=import_map.json index.ts)"
