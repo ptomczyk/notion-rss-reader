@@ -20,5 +20,6 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
       - name: Update Notion Feed
-        run:
-          echo "$(ls -la ../notion-rss-reader)"
+        run: |
+          cd ../notion-rss-reader/
+          echo "$(deno task start)"
