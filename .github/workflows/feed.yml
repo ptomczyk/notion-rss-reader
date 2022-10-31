@@ -2,7 +2,7 @@ name: Feed Cron
 
 on:
   schedule:
-    - cron: "0 */8 * * *" # At minute 0 past every 8th hour.
+    - cron: "0 6 * * *" # At 06:00.
   workflow_dispatch:
 
 jobs:
