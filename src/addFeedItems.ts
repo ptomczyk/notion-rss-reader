@@ -9,8 +9,8 @@ export const addFeedItems = async (
     [key: string]: TODO
   }[]
 ) => {
-  const notion = new Client({ auth: process.env.NOTION_KEY })
-  const databaseId = process.env.NOTION_READER_DATABASE_ID || ''
+  const notion = new Client({ auth: Deno.env.get("NOTION_KEY") })
+  const databaseId = Deno.env.get("NOTION_READER_DATABASE_ID") || ''
 
   newFeedItems.forEach(async (item) => {
     const { title, link, enclosure, pubDate } = item

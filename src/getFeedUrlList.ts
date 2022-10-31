@@ -4,8 +4,8 @@ import { Client } from '@notionhq/client'
 type TODO = any
 
 export const getFeedUrlList = async () => {
-  const notion = new Client({ auth: process.env.NOTION_KEY })
-  const databaseId = process.env.NOTION_FEEDER_DATABASE_ID || ''
+  const notion = new Client({ auth: Deno.env.get("NOTION_KEY") })
+  const databaseId = Deno.env.get("NOTION_FEEDER_DATABASE_ID") || ''
 
   const response = await notion.databases.query({
     database_id: databaseId,
