@@ -12,7 +12,6 @@ jobs:
       NOTION_KEY: ${{ secrets.NOTION_KEY }}
       NOTION_READER_DATABASE_ID: ${{ secrets.NOTION_READER_DATABASE_ID }}
       NOTION_FEEDER_DATABASE_ID: ${{ secrets.NOTION_FEEDER_DATABASE_ID }}
-      DENO_DIR: deno
 
     steps:
       - name: Setup Deno
