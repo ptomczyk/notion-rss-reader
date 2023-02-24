@@ -13,4 +13,4 @@ feedUrlList.forEach(async (feedUrl: string) => {
       console.error('getFeedUrlList', error)
     }
   }
-})
+});
