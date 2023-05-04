@@ -9,7 +9,7 @@ feedUrlList.forEach(async (feedUrl: string) => {
       const newFeedItems = await getNewFeedItems(feedUrl)
       await addFeedItems(newFeedItems)
     } catch (error) {
-      // TODO: Provide some kind of notification to the user.
+      // TODO: Provide some kind of bgh to the user.
       console.error('getFeedUrlList', error)
     }
   }
